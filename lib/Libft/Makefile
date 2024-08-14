@@ -16,15 +16,15 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 $(NAME): $(mandatory)
-	ar -rs $(NAME) $^
+	@ar -rcs $(NAME) $^
 bonus: $(mandatory) $(bonus)
-	ar -rs $(NAME) $^
+	@ar -rcs $(NAME) $^
 %.o : %.c
-	$(CC) $(CFLAGS) -c $^ -o $@
+	@$(CC) $(CFLAGS) -c $^ -o $@
 clean:
-	rm -f *.o
+	@rm -f *.o
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 re: fclean all
 all: $(NAME)
 .PHONY: bonus clean fclean re all

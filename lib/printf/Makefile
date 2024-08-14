@@ -6,7 +6,7 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 $(NAME): $(mandatory)
-	ar -rc $(NAME) $(mandatory)
+	@ar -rc $(NAME) $(mandatory)
 %.o : %.c
 	$(CC) $(CFLAGS) -c $^ -o $@
 clean:

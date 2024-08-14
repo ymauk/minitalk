@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   server.c                                           :+:      :+:    :+:   */
+/*   minitalk.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymauk <ymauk@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/13 15:44:24 by ymauk             #+#    #+#             */
-/*   Updated: 2024/08/14 14:30:20 by ymauk            ###   ########.fr       */
+/*   Created: 2024/08/14 10:27:08 by ymauk             #+#    #+#             */
+/*   Updated: 2024/08/14 14:34:38 by ymauk            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minitalk.h"
+#ifndef MINITALK_H
+# define MINITALK_H
 
-int	main(int argc, char **argv)
-{
-	int	pid;
+# include "lib/Libft/libft.h"
+# include "lib/printf/ft_printf.h"
+# include <signal.h>
+# include <stdlib.h>
+# include <unistd.h>
 
-	argv = 0;
-	argc = 0;
-	pid = getpid();
-	ft_printf("%sPID Number: %d\n%s", G, pid, DC);
-	return (0);
-}
+
+//colours
+
+# define B "\033[1;34m"
+# define P "\033[1;35m"
+# define R "\033[1;31m"
+# define G "\033[1;32m"
+# define DC "\033[0;39m"
+
+
+
+#endif
